@@ -5,7 +5,8 @@
         }
     },
     "require-dev": {
-        "nesk/puphpeteer": "^2.0"
+        "nesk/puphpeteer": "^2.0",
+        "phpunit/phpunit": "^9"
     },
     "require": {
         "php-di/php-di": "^6.4"
