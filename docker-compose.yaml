@@ -1,0 +1,8 @@
+version: "2"
+services:
+  wl-php-scrapper:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - .:/app
