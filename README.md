@@ -10,7 +10,7 @@ to scrap data start command ./scrap-data.sh
 command will run command `php scrapper.php` in docker env
 
 to run tests start command ./run-tests.sh
-command will run command `./vendor/bin/phpunit --bootstrap tests/bootstrap.php tests` in docker env
+command will run command `php phpunit-9.5.phar --bootstrap tests/bootstrap.php tests --bootstrap tests/bootstrap.php tests` in docker env
 
 it's also possible to start docker-compose and run command 'php scrapper.php' in the container
 
