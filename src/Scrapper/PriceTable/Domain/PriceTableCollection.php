@@ -24,7 +24,8 @@ class PriceTableCollection // implements ... - use here proper php array interfa
         return $a->getPrice() < $b->getPrice() ? 1 : 0;
     }
 
-    public function next() {
+    public function next()
+    {
         $this->index++;
     }
 
