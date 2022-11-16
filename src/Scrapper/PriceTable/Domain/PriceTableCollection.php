@@ -9,6 +9,7 @@ class PriceTableCollection // implements ... - use here proper php array interfa
 
     public function add(PriceTable $priceTable) : void
     {
+        $this->index++;
         $this->data[] = $priceTable;
     }
 
@@ -24,12 +25,13 @@ class PriceTableCollection // implements ... - use here proper php array interfa
         return $a->getPrice() < $b->getPrice() ? 1 : 0;
     }
 
-    public function next()
+    public function next() : void
     {
         $this->index++;
     }
 
-    public function rewind() {
+    public function rewind() : void
+    {
         $this->index = 0;
     }
 
@@ -48,7 +50,7 @@ class PriceTableCollection // implements ... - use here proper php array interfa
         return array_key_exists($this->index, $this->data);
     }
 
-    public function toArray()
+    public function toArray() : array
     {
         $result = [];
 
