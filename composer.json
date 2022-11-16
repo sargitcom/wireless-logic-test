@@ -1,12 +1,13 @@
 {
     "autoload": {
         "psr-4": {
-            "WirelessLogic\\": "src/"
+            "WirelessLogic\\": "src/",
+            "WirelessLogic\\Tests\\": "tests/"
         }
     },
     "require-dev": {
         "nesk/puphpeteer": "^2.0",
-        "phpunit/phpunit": "^9"
+        "phpunit/phpunit": "*"
     },
     "require": {
         "php-di/php-di": "^6.4"

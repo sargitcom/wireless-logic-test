@@ -6,13 +6,13 @@ class Price
 {
     private string $currency;
 
-    private string $amount;
+    private float $amount;
 
     /**
      * @param string $currency
-     * @param string $amount
+     * @param float $amount
      */
-    public function __construct(string $currency, string $amount)
+    public function __construct(string $currency, float $amount)
     {
         $this->currency = $currency;
         $this->amount = $amount;
@@ -23,7 +23,7 @@ class Price
         $currency = $scrappedValue[0]; // simplified, another value object should be provided here with propper logic
                                        // to read currency from string
 
-        $amount = preg_replace("/[^0-9]./", "", $scrappedValue);
+        $amount = floatval(preg_replace("/[^0-9.]/", "", $scrappedValue));
 
         return new self(
             $currency,
@@ -42,7 +42,7 @@ class Price
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): float
     {
         return $this->amount;
     }
